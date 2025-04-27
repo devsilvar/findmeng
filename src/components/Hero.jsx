@@ -108,7 +108,7 @@ export default function Hero() {
                 : 'opacity-0 translate-y-12'
             }`}
           >
-            <img src='/biznearme.png' className='w-[500px]' alt='' />
+            <img src='/biznear.png' className='w-[450px]' alt='' />
             {/* <SearchResultSimulation /> */}
           </div>
         </div>
