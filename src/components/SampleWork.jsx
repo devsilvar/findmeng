@@ -9,6 +9,7 @@ import {
   ArrowRight,
   ArrowLeft,
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 // Portfolio Section Component
 export const SampleWorksSection = () => {
@@ -16,46 +17,41 @@ export const SampleWorksSection = () => {
 
   const portfolioItems = [
     {
-      businessName: "Chuka's Auto Garage",
-      location: 'Enugu',
+      businessName: 'Farsy Adire Attires',
+      location: 'Ibdan',
       beforeAfter: {
         before: 'No online presence',
         after: 'Professional landing page + Google My Business',
       },
       results: 'Now getting 10+ new customer calls weekly!',
-      testimonial:
-        "My phone doesn't stop ringing now. People find me before my competitors!",
-      owner: 'Chuka O.',
-      image: '/api/placeholder/500/300',
-      color: 'blue',
+      testimonial: 'People now find me online and call',
+      owner: 'O .Fatimah',
+      image: '/farsyAdire.jpg',
     },
     {
-      businessName: "Fatima's Fashion Boutique",
-      location: 'Abuja',
+      businessName: 'Daucus Light Costmetic',
+      location: 'Ibadan',
       beforeAfter: {
-        before: 'Only Instagram sales',
+        before: 'Only Facebook sales',
         after: 'Landing page connected to WhatsApp',
       },
-      results: 'Now receiving 2x more walk-ins every week!',
+      results: 'Now receiving 2x more Calls every week!',
       testimonial:
         'The WhatsApp button alone brings me 15-20 new inquiries weekly!',
-      owner: 'Fatima M.',
-      image: '/api/placeholder/500/300',
-      color: 'pink',
+      owner: 'A . Saidat',
+      image: '/daucus.jpg',
     },
     {
-      businessName: 'Okafor Plumbing Services',
+      businessName: 'Kabug Electronics',
       location: 'Lagos',
       beforeAfter: {
         before: 'Word-of-mouth referrals only',
-        after: 'Local SEO + Google My Business listing',
+        after: 'Business on Google + Landing Page Website',
       },
       results: 'Booked solid for 3 months straight!',
-      testimonial:
-        'I had to hire two new plumbers just to keep up with demand!',
+      testimonial: 'More sales',
       owner: 'Emmanuel O.',
-      image: '/api/placeholder/500/300',
-      color: 'indigo',
+      image: '/bizness.jpg',
     },
   ];
 
@@ -81,7 +77,7 @@ export const SampleWorksSection = () => {
   };
 
   return (
-    <div className='py-16 bg-gray-50'>
+    <div className='py-16 bg-gray-50' id='examples'>
       <div className='max-w-6xl mx-auto px-4 md:px-8'>
         <div className='text-center mb-12'>
           <h2 className='text-3xl md:text-4xl font-bold text-blue-900 mb-3'>
@@ -109,15 +105,17 @@ export const SampleWorksSection = () => {
                 <img
                   src={item.image}
                   alt={`${item.businessName} results`}
-                  className='object-cover w-full h-full opacity-90 mix-blend-overlay'
+                  className='object-cover w-full h-full '
                 />
-                <div className='absolute inset-0 flex flex-col justify-center items-center text-white p-4'>
-                  <h3 className='text-xl font-bold mb-1'>
-                    {item.businessName}
-                  </h3>
-                  <div className='flex items-center text-sm'>
-                    <MapPin size={14} className='mr-1' />
-                    <span>{item.location}</span>
+                <div className='absolute inset-0 flex flex-col justify-center items-center text-white p-4 '>
+                  <div className='bg-white text-black justify-center flex flex-col text-center rounded-md p-2'>
+                    <h3 className='text-md text-center font-bold mb-1'>
+                      {item.businessName}
+                    </h3>
+                    <div className='flex items-center justify-center text-sm'>
+                      <MapPin size={14} className='mr-1' />
+                      <span>{item.location}</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -173,14 +171,12 @@ export const SampleWorksSection = () => {
                 >
                   {/* Image Section */}
                   <div
-                    className={`h-48 bg-gradient-to-r ${getColorClass(
-                      item.color
-                    )} flex justify-center items-center relative overflow-hidden`}
+                    className={`h-48 flex justify-center items-center relative overflow-hidden`}
                   >
                     <img
                       src={item.image}
                       alt={`${item.businessName} results`}
-                      className='object-cover w-full h-full opacity-90 mix-blend-overlay'
+                      className='object-cover w-full h-full '
                     />
                     <div className='absolute inset-0 flex flex-col justify-center items-center text-white p-4'>
                       <h3 className='text-xl font-bold mb-1'>
@@ -197,7 +193,7 @@ export const SampleWorksSection = () => {
                   <div className='p-6'>
                     <div className='bg-blue-50 p-4 rounded-lg mb-4'>
                       <div className='flex items-center mb-2'>
-                        <div className='w-3 h-3 bg-red-500 rounded-full mr-2'></div>
+                        <div className='w-3 h-3  rounded-full mr-2'></div>
                         <p className='text-gray-600 font-medium'>Before:</p>
                       </div>
                       <p className='text-gray-800 ml-5 mb-3'>
@@ -264,7 +260,7 @@ export const SampleWorksSection = () => {
         </div>
 
         {/* Stats Bar */}
-        <div className='mt-16 grid grid-cols-1 md:grid-cols-3 gap-8'>
+        {/* <div className='mt-16 grid grid-cols-1 md:grid-cols-3 gap-8'>
           <div className='bg-white p-6 rounded-xl shadow-md border-t-4 border-blue-500 transform transition hover:scale-105'>
             <div className='flex items-center mb-4'>
               <div className='bg-blue-500 p-3 rounded-full mr-4'>
@@ -300,7 +296,7 @@ export const SampleWorksSection = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* CTA Banner */}
         <div className='mt-16 bg-gradient-to-r from-blue-700 to-blue-500 rounded-xl shadow-xl p-8 text-white'>
@@ -313,9 +309,11 @@ export const SampleWorksSection = () => {
                 Let us transform your business visibility today!
               </p>
             </div>
-            <button className='bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold py-4 px-8 rounded-lg flex items-center gap-2 transition-colors text-lg'>
-              Boost My Business Now <ArrowRightCircle size={20} />
-            </button>
+            <Link to='/contact'>
+              <button className='bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold py-4 px-8 rounded-lg flex items-center gap-2 transition-colors text-lg'>
+                Boost My Business Now <ArrowRightCircle size={20} />
+              </button>
+            </Link>
           </div>
         </div>
       </div>

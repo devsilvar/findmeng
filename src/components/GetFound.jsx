@@ -7,9 +7,10 @@ import {
   Star,
   ChevronRight,
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 export default function BusinessBoosterKit() {
   return (
-    <div className='w-full bg-white'>
+    <div className='w-full bg-white' id='booster'>
       {/* Hero Section - Full Width */}
       <div className='bg-gradient-to-r from-blue-800 to-blue-600 text-white'>
         <div className='max-w-6xl mx-auto py-16 px-4 md:px-8'>
@@ -25,54 +26,21 @@ export default function BusinessBoosterKit() {
                 The ultimate visibility solution for Nigerian small and medium
                 businesses
               </p>
-              <button className='bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold py-4 px-8 rounded-lg flex items-center gap-2 transition-colors text-lg'>
-                Boost My Business Now <ArrowRightCircle size={20} />
-              </button>
+              <Link to='contact'>
+                <button className='bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold py-4 px-8 rounded-lg flex items-center gap-2 transition-colors text-lg'>
+                  Boost My Business Now <ArrowRightCircle size={20} />
+                </button>
+              </Link>
             </div>
             <div className='flex justify-center'>
-              <div className='bg-white/10 backdrop-blur p-6 rounded-lg'>
-                <div className='flex items-center mb-4'>
-                  <Star
-                    className='text-yellow-400'
-                    fill='currentColor'
-                    size={24}
-                  />
-                  <Star
-                    className='text-yellow-400'
-                    fill='currentColor'
-                    size={24}
-                  />
-                  <Star
-                    className='text-yellow-400'
-                    fill='currentColor'
-                    size={24}
-                  />
-                  <Star
-                    className='text-yellow-400'
-                    fill='currentColor'
-                    size={24}
-                  />
-                  <Star
-                    className='text-yellow-400'
-                    fill='currentColor'
-                    size={24}
-                  />
-                </div>
-                <p className='text-lg italic'>
-                  "My business website traffic increased by 270% in just 30
-                  days!"
-                </p>
-                <p className='font-bold mt-2'>
-                  — Ade B., Lagos Restaurant Owner
-                </p>
-              </div>
+              <img src='/flyer.png' alt='' srcset='' />
             </div>
           </div>
         </div>
       </div>
 
       {/* Statistics Bar */}
-      <div className='bg-blue-900 text-white py-6'>
+      {/* <div className='bg-blue-900 text-white py-6'>
         <div className='max-w-6xl mx-auto px-4 md:px-8'>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center'>
             <div>
@@ -95,7 +63,7 @@ export default function BusinessBoosterKit() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Sample Works Section */}
     </div>

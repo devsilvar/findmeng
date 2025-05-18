@@ -39,7 +39,7 @@ export default function ProblemSection() {
       </div>
 
       <div
-        className={`max-w-6xl mx-auto px-4 transition-all duration-1000 transform ${
+        className={`max-w-6xl mx-auto px-2 lg:px-4 transition-all duration-1000 transform ${
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
         }`}
       >
@@ -86,7 +86,7 @@ export default function ProblemSection() {
           </div>
 
           <div className='bg-blue-50 backdrop-blur-md rounded-2xl p-1'>
-            <div className='relative overflow-hidden rounded-xl bg-gradient-to-br from-blue-100 to-blue-200 p-8'>
+            <div className='relative w-full overflow-hidden rounded-xl bg-gradient-to-br from-blue-100 to-blue-200 p-2 lg:p-6'>
               {/* Traditional Approach Content */}
               <div
                 className={`transition-all duration-500 ${

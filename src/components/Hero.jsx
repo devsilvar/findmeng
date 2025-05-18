@@ -27,9 +27,9 @@ export default function Hero() {
       </div>
 
       <div className='container mx-auto px-4 py-16 lg:py-24 relative z-10'>
-        <div className='flex flex-col lg:flex-row items-center gap-8 lg:gap-16'>
+        <div className='flex flex-col lg:flex-row items-center justify-around  gap-24'>
           <div
-            className={`w-full lg:w-1/2 transition-all duration-1000 ${
+            className={`w-full  transition-all duration-1000 ${
               isVisible
                 ? 'opacity-100 translate-x-0'
                 : 'opacity-0 -translate-x-12'
@@ -77,16 +77,20 @@ export default function Hero() {
             </div>
 
             <div className='flex flex-col sm:flex-row gap-4 mb-8'>
-              <button className='group py-4 px-8 bg-yellow-500 hover:bg-yellow-400 text-blue-950 text-lg font-bold rounded-lg transition duration-300 flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-1'>
-                Get your Own
-                <ArrowRight
-                  className='ml-2 group-hover:translate-x-1 transition-transform'
-                  size={24}
-                />
-              </button>
-              <button className='py-4 px-8 border-2 border-white hover:bg-white/20 rounded-lg transition duration-300 flex items-center justify-center text-lg'>
-                See Examples
-              </button>
+              <a href='#booster'>
+                <button className='group py-4 px-8 bg-yellow-500 hover:bg-yellow-400 text-blue-950 text-lg font-bold rounded-lg transition duration-300 flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-1'>
+                  Get your Own
+                  <ArrowRight
+                    className='ml-2 group-hover:translate-x-1 transition-transform'
+                    size={24}
+                  />
+                </button>
+              </a>
+              <a href='#examples'>
+                <button className='py-4 px-8 border-2 border-white hover:bg-white/20 rounded-lg transition duration-300 flex items-center justify-center text-lg'>
+                  See Examples
+                </button>
+              </a>
             </div>
 
             <div className='flex flex-wrap gap-6 text-base'>
@@ -102,13 +106,13 @@ export default function Hero() {
           </div>
 
           <div
-            className={`w-full lg:w-1/2 transition-all duration-1000 delay-300 ${
+            className={`w-full lg:w-[50%] transition-all duration-1000 delay-300 ${
               isVisible
                 ? 'opacity-100 translate-y-0'
                 : 'opacity-0 translate-y-12'
             }`}
           >
-            <img src='/biznear.png' className='w-[450px]' alt='' />
+            <img src='/bizhero.png' className='w-[400px]' alt='' />
             {/* <SearchResultSimulation /> */}
           </div>
         </div>

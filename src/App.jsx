@@ -1,20 +1,17 @@
+import { Route, Router, Routes } from 'react-router-dom';
 import './App.css';
-import BusinessBoosterKit from './components/GetFound';
-import Hero from './components/Hero';
-import ProblemSection from './components/ProblemSection';
-import WhatYouGetSection from './components/WhatYouGet';
-import BenefitsSection from './components/WhyitWorks';
+import Home from './pages/Home';
+import ContactSection from './pages/Contact';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <>
-      <Hero />
-      <ProblemSection />
-      <BusinessBoosterKit />
-      <WhatYouGetSection />
-      <BenefitsSection />
-      {/* <BeforeAfter /> */}
-      {/* <SampleWorksSection /> */}
+      <ScrollToTop />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/contact' element={<ContactSection />} />
+      </Routes>
     </>
   );
 }
