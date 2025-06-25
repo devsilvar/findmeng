@@ -5,6 +5,7 @@ import BusinessBoosterKit from '../components/GetFound';
 import WhatYouGetSection from '../components/WhatYouGet';
 import BenefitsSection from '../components/WhyitWorks';
 import { SampleWorksSection } from '../components/SampleWork';
+import PricingPage from '../components/Pricing';
 
 const Home = () => {
   return (
@@ -12,7 +13,8 @@ const Home = () => {
       <Hero />
       <ProblemSection />
       <BusinessBoosterKit />
-      <WhatYouGetSection />
+      {/* <WhatYouGetSection /> */}
+      <PricingPage />
       <BenefitsSection />
       {/* <OurWorkSection /> */}
       {/* <BeforeAfter /> */}
